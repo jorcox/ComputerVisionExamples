@@ -1,0 +1,1498 @@
+12:15:54 **** Rebuild of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:73:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis-Jorge.o" "..\\src\\T4Bis-Jorge.cpp" 
+..\src\T4Bis-Jorge.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis-Jorge.cpp:30:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis-Jorge.cpp:51:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis-Jorge.cpp: In function 'int main()':
+..\src\T4Bis-Jorge.cpp:79:63: error: no matching function for call to 'cv::Stitcher::estimateTransform(std::vector<cv::Mat>*)'
+  Stitcher::Status status = Stitcher::estimateTransform(&imgsCL);
+                                                               ^
+..\src\T4Bis-Jorge.cpp:79:63: note: candidates are:
+In file included from ..\src\T4Bis-Jorge.cpp:19:0:
+D:\OpenCV\OpenCV249PC\opencv\build\include/opencv2/stitching/stitcher.hpp:124:12: note: cv::Stitcher::Status cv::Stitcher::estimateTransform(cv::InputArray)
+     Status estimateTransform(InputArray images);
+            ^
+D:\OpenCV\OpenCV249PC\opencv\build\include/opencv2/stitching/stitcher.hpp:124:12: note:   no known conversion for argument 1 from 'std::vector<cv::Mat>*' to 'cv::InputArray {aka const cv::_InputArray&}'
+D:\OpenCV\OpenCV249PC\opencv\build\include/opencv2/stitching/stitcher.hpp:125:12: note: cv::Stitcher::Status cv::Stitcher::estimateTransform(cv::InputArray, const std::vector<std::vector<cv::Rect_<int> > >&)
+     Status estimateTransform(InputArray images, const std::vector<std::vector<Rect> > &rois);
+            ^
+D:\OpenCV\OpenCV249PC\opencv\build\include/opencv2/stitching/stitcher.hpp:125:12: note:   candidate expects 2 arguments, 1 provided
+..\src\T4Bis-Jorge.cpp:82:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4Bis-Jorge.cpp:79:19: warning: unused variable 'status' [-Wunused-variable]
+  Stitcher::Status status = Stitcher::estimateTransform(&imgsCL);
+                   ^
+12:16:17 **** Rebuild of configuration Debug for project T1 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo1.o" "..\\src\\Trabajo1.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Distorsion.o" "..\\src\\Distorsion.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Posterizacion.o" "..\\src\\Posterizacion.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Alien.o" "..\\src\\Alien.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Espejo.o" "..\\src\\Espejo.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Extra2.o" "..\\src\\Extra2.cpp" 
+..\src\Extra2.cpp: In function 'int extra2()':
+..\src\Extra2.cpp:67:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 0; i < channels.size(); ++i)
+                                      ^
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contraste.o" "..\\src\\Contraste.cpp" 
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T1.exe "src\\Alien.o" "src\\Contraste.o" "src\\Distorsion.o" "src\\Espejo.o" "src\\Extra2.o" "src\\Posterizacion.o" "src\\Trabajo1.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+12:16:27 **** Rebuild of configuration Debug for project T2 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Figura.o" "..\\src\\Figura.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo2.o" "..\\src\\Trabajo2.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Mahalanobis.o" "..\\src\\Mahalanobis.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Aprender.o" "..\\src\\Aprender.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Reconocer.o" "..\\src\\Reconocer.cpp" 
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T2.exe "src\\Aprender.o" "src\\Figura.o" "src\\Mahalanobis.o" "src\\Reconocer.o" "src\\Trabajo2.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+12:16:35 **** Rebuild of configuration Debug for project T3 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PuntoFugaBasico.o" "..\\src\\PuntoFugaBasico.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Sobel.o" "..\\src\\Sobel.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo3.o" "..\\src\\Trabajo3.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Canny.o" "..\\src\\Canny.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PuntoFugaAvanzado.o" "..\\src\\PuntoFugaAvanzado.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PuntoFugaLive.o" "..\\src\\PuntoFugaLive.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PuntoFugaImage.o" "..\\src\\PuntoFugaImage.cpp" 
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T3.exe "src\\Canny.o" "src\\PuntoFugaAvanzado.o" "src\\PuntoFugaBasico.o" "src\\PuntoFugaImage.o" "src\\PuntoFugaLive.o" "src\\Sobel.o" "src\\Trabajo3.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+12:16:45 **** Rebuild of configuration Debug for project T4 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ImagePan.o" "..\\src\\ImagePan.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\RelacionImg.o" "..\\src\\RelacionImg.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo4.o" "..\\src\\Trabajo4.cpp" 
+..\src\Trabajo4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\Trabajo4.cpp:26:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\Trabajo4.cpp:48:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\Trabajo4.cpp: In function 'int main()':
+..\src\Trabajo4.cpp:69:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < imgs.size(); ++i) {
+                                ^
+..\src\Trabajo4.cpp:83:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < imgs.size(); ++i) {
+                                ^
+..\src\Trabajo4.cpp:95:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < imgs.size(); ++i) {
+                                ^
+..\src\Trabajo4.cpp:96:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int j = 0; j < imgs.size(); ++j) {
+                                 ^
+..\src\Trabajo4.cpp:121:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < imgs.size(); ++i) {
+                                ^
+..\src\Trabajo4.cpp:127:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < relations.size(); ++i) {
+                                     ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4.exe "src\\ImagePan.o" "src\\RelacionImg.o" "src\\Trabajo4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+12:16:51 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\T4Bis.o" "src\\T4Bis-Jorge.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+g++: error: src\T4Bis-Jorge.o: No such file or directory
+12:37:12 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:88:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ransac.o" "..\\src\\Ransac.cpp" 
+..\src\Ransac.cpp: In function 'cv::Mat Ransac(std::vector<cv::Point_<float> >, std::vector<cv::Point_<float> >)':
+..\src\Ransac.cpp:25:6: warning: unused variable 'umbral_consenso' [-Wunused-variable]
+  int umbral_consenso = 5;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+12:38:09 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:90:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+12:39:32 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:92:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
+12:47:41 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:92:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+12:49:12 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:92:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+12:50:05 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:93:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+12:53:09 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:96:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+12:54:16 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:98:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+12:55:37 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:99:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+12:56:51 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:99:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+13:01:23 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:101:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+13:02:05 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:101:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
+17:30:02 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:100:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+17:31:53 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:103:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+17:33:00 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:103:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+17:34:41 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:101:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
+17:35:25 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:101:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+17:36:33 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:101:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+17:37:12 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:80:7: warning: unused variable 'keyP' [-Wunused-variable]
+   int keyP = waitKey(1000);
+       ^
+..\src\T4Bis.cpp:97:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4Bis.cpp:92:6: warning: unused variable 'keyP' [-Wunused-variable]
+  int keyP = waitKey(5000);
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+17:38:07 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:80:7: warning: unused variable 'keyP' [-Wunused-variable]
+   int keyP = waitKey(1000);
+       ^
+..\src\T4Bis.cpp:97:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4Bis.cpp:92:6: warning: unused variable 'keyP' [-Wunused-variable]
+  int keyP = waitKey(5000);
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
+17:40:26 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main()':
+..\src\T4Bis.cpp:80:7: warning: unused variable 'keyP' [-Wunused-variable]
+   int keyP = waitKey(1000);
+       ^
+..\src\T4Bis.cpp:97:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4Bis.cpp:92:6: warning: unused variable 'keyP' [-Wunused-variable]
+  int keyP = waitKey(5000);
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
+19:13:46 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main(int, char**)':
+..\src\T4Bis.cpp:100:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4Bis.cpp:119:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4Bis.cpp:55:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ransac.o" "..\\src\\Ransac.cpp" 
+..\src\Ransac.cpp: In function 'cv::Mat Ransac(std::vector<cv::Point_<float> >, std::vector<cv::Point_<float> >)':
+..\src\Ransac.cpp:25:6: warning: unused variable 'umbral_consenso' [-Wunused-variable]
+  int umbral_consenso = 5;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+19:27:21 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4Bis.o" "..\\src\\T4Bis.cpp" 
+..\src\T4Bis.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4Bis.cpp:28:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4Bis.cpp:49:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4Bis.cpp: In function 'int main(int, char**)':
+..\src\T4Bis.cpp:100:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4Bis.cpp:119:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4Bis.cpp:55:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+19:40:11 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:30:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:51:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:102:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:121:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:57:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ransac.o" "..\\src\\Ransac.cpp" 
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" "src\\T4Bis.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+src\T4Bis.o: In function `ZSt13__copy_move_aILb0EPN2cv6Point_IfEES3_ET1_T0_S5_S4_':
+D:\Dropbox\Universidad\Cuarto\Cuatrimestre8\VC\workspace\T4Bis\Debug/../src/T4Bis.cpp:23: multiple definition of `calcMinMax(std::vector<std::vector<cv::Point_<float>, std::allocator<cv::Point_<float> > >, std::allocator<std::vector<cv::Point_<float>, std::allocator<cv::Point_<float> > > > >, std::vector<cv::Point_<float>, std::allocator<cv::Point_<float> > >, std::vector<float, std::allocator<float> >*)'
+src\T4.o:D:\Dropbox\Universidad\Cuarto\Cuatrimestre8\VC\workspace\T4Bis\Debug/../src/T4.cpp:25: first defined here
+src\T4Bis.o: In function `ZNSt6vectorIN2cv6Point_IfEESaIS2_EE13_M_insert_auxEN9__gnu_cxx17__normal_iteratorIPS2_S4_EERKS2_':
+D:\Dropbox\Universidad\Cuarto\Cuatrimestre8\VC\workspace\T4Bis\Debug/../src/T4Bis.cpp:51: multiple definition of `main'
+src\T4.o:D:\Dropbox\Universidad\Cuarto\Cuatrimestre8\VC\workspace\T4Bis\Debug/../src/T4.cpp:53: first defined here
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for T1
+Info: Nothing to build for T2
+19:40:42 **** Incremental Build of configuration Debug for project T3 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Sobel.o" "..\\src\\Sobel.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Canny.o" "..\\src\\Canny.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PuntoFugaLive.o" "..\\src\\PuntoFugaLive.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PuntoFugaBasico.o" "..\\src\\PuntoFugaBasico.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PuntoFugaAvanzado.o" "..\\src\\PuntoFugaAvanzado.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PuntoFugaImage.o" "..\\src\\PuntoFugaImage.cpp" 
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T3.exe "src\\Canny.o" "src\\PuntoFugaAvanzado.o" "src\\PuntoFugaBasico.o" "src\\PuntoFugaImage.o" "src\\PuntoFugaLive.o" "src\\Sobel.o" "src\\Trabajo3.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+19:40:54 **** Incremental Build of configuration Debug for project T4 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ImagePan.o" "..\\src\\ImagePan.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo4.o" "..\\src\\Trabajo4.cpp" 
+..\src\Trabajo4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\Trabajo4.cpp:26:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\Trabajo4.cpp:48:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\Trabajo4.cpp: In function 'int main()':
+..\src\Trabajo4.cpp:69:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < imgs.size(); ++i) {
+                                ^
+..\src\Trabajo4.cpp:83:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < imgs.size(); ++i) {
+                                ^
+..\src\Trabajo4.cpp:95:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < imgs.size(); ++i) {
+                                ^
+..\src\Trabajo4.cpp:96:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int j = 0; j < imgs.size(); ++j) {
+                                 ^
+..\src\Trabajo4.cpp:121:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < imgs.size(); ++i) {
+                                ^
+..\src\Trabajo4.cpp:127:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < relations.size(); ++i) {
+                                     ^
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\RelacionImg.o" "..\\src\\RelacionImg.cpp" 
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4.exe "src\\ImagePan.o" "src\\RelacionImg.o" "src\\Trabajo4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+19:41:02 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T1
+Info: Nothing to build for T2
+Info: Nothing to build for T3
+Info: Nothing to build for T4
+19:49:25 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:63:2: error: expected ',' or ';' before 'int'
+  int matcher = 0;            // 1 Bruta 2 FLANN
+  ^
+..\src\T4.cpp:77:3: error: 'matcher' was not declared in this scope
+   matcher = atoi(argv[6]);
+   ^
+..\src\T4.cpp:105:3: error: 'matcher' was not declared in this scope
+   matcher = atoi(argv[7]);
+   ^
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:170:7: error: redeclaration of 'cv::Mat descriptorsCore'
+   Mat descriptorsCore, descriptorsAdd;
+       ^
+..\src\T4.cpp:142:7: error: 'cv::Mat descriptorsCore' previously declared here
+   Mat descriptorsCore, descriptorsAdd;
+       ^
+..\src\T4.cpp:170:24: error: redeclaration of 'cv::Mat descriptorsAdd'
+   Mat descriptorsCore, descriptorsAdd;
+                        ^
+..\src\T4.cpp:142:24: error: 'cv::Mat descriptorsAdd' previously declared here
+   Mat descriptorsCore, descriptorsAdd;
+                        ^
+Info: Nothing to build for T1
+Info: Nothing to build for T2
+Info: Nothing to build for T3
+Info: Nothing to build for T4
+19:50:08 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+..\src\T4.cpp:63:6: warning: variable 'matcher' set but not used [-Wunused-but-set-variable]
+  int matcher = 0;            // 1 Bruta 2 FLANN
+      ^
+..\src\T4.cpp:64:6: warning: variable 'ransac' set but not used [-Wunused-but-set-variable]
+  int ransac = 0;    // 1 Casero 2 NoCasero
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+19:54:20 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+19:55:13 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+19:56:44 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+20:02:30 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+20:06:37 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+20:13:16 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:308:11: warning: unused variable 'seconds' [-Wunused-variable]
+    double seconds = difftime(pre,post);
+           ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+20:13:57 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+20:15:01 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+20:15:17 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+20:17:34 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
+20:18:21 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+20:18:50 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+20:19:17 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
+23:12:40 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+21:30:12 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+src\Ransac.o: In function `ZNKSt6vectorIN2cv6Point_IfEESaIS2_EE14_M_range_checkEj':
+c:/mingw/lib/gcc/mingw32/4.9.3/include/c++/bits/stl_vector.h:803: undefined reference to `std::__throw_out_of_range_fmt(char const*, ...)'
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for T1
+Info: Nothing to build for T2
+Info: Nothing to build for T3
+Info: Nothing to build for T4
+21:30:30 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ransac.o" "..\\src\\Ransac.cpp" 
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4Bis
+13:18:30 **** Incremental Build of configuration Debug for project T2 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo2.o" "..\\src\\Trabajo2.cpp" 
+..\src\Trabajo2.cpp:1:23: fatal error: opencv/cv.h: No such file or directory
+ #include <opencv/cv.h>
+                       ^
+compilation terminated.
+13:21:12 **** Incremental Build of configuration Debug for project T1 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Extra2.o" "..\\src\\Extra2.cpp" 
+..\src\Extra2.cpp:1:23: fatal error: opencv/cv.h: No such file or directory
+ #include <opencv/cv.h>
+                       ^
+compilation terminated.
+13:21:12 **** Incremental Build of configuration Debug for project T2 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Reconocer.o" "..\\src\\Reconocer.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Aprender.o" "..\\src\\Aprender.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Mahalanobis.o" "..\\src\\Mahalanobis.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Figura.o" "..\\src\\Figura.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo2.o" "..\\src\\Trabajo2.cpp" 
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCVMinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T2.exe "src\\Aprender.o" "src\\Figura.o" "src\\Mahalanobis.o" "src\\Reconocer.o" "src\\Trabajo2.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_calib3d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_contrib249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_core249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_features2d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_flann249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_gpu249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_highgui249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_imgproc249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_legacy249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_ml249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_nonfree249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_objdetect249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_photo249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_stitching249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_video249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_videostab249
+collect2.exe: error: ld returned 1 exit status
+13:21:19 **** Incremental Build of configuration Debug for project T3 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PuntoFugaAvanzado.o" "..\\src\\PuntoFugaAvanzado.cpp" 
+..\src\PuntoFugaAvanzado.cpp:1:23: fatal error: opencv/cv.h: No such file or directory
+ #include <opencv/cv.h>
+                       ^
+compilation terminated.
+13:21:20 **** Incremental Build of configuration Debug for project T4 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ImagePan.o" "..\\src\\ImagePan.cpp" 
+..\src\ImagePan.cpp:8:28: fatal error: opencv/highgui.h: No such file or directory
+ #include <opencv/highgui.h>
+                            ^
+compilation terminated.
+13:21:20 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp:7:23: fatal error: opencv/cv.h: No such file or directory
+ #include <opencv/cv.h>
+                       ^
+compilation terminated.
+13:21:26 **** Incremental Build of configuration Debug for project T2 ****
+Info: Internal Builder is used for build
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCVMinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T2.exe "src\\Aprender.o" "src\\Figura.o" "src\\Mahalanobis.o" "src\\Reconocer.o" "src\\Trabajo2.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_calib3d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_contrib249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_core249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_features2d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_flann249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_gpu249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_highgui249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_imgproc249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_legacy249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_ml249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_nonfree249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_objdetect249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_photo249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_stitching249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_video249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_videostab249
+collect2.exe: error: ld returned 1 exit status
+13:21:49 **** Incremental Build of configuration Debug for project T2 ****
+Info: Internal Builder is used for build
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCVMinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T2.exe "src\\Aprender.o" "src\\Figura.o" "src\\Mahalanobis.o" "src\\Reconocer.o" "src\\Trabajo2.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_calib3d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_contrib249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_core249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_features2d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_flann249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_gpu249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_highgui249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_imgproc249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_legacy249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_ml249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_nonfree249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_objdetect249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_photo249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_stitching249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_video249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_videostab249
+collect2.exe: error: ld returned 1 exit status
+13:21:56 **** Incremental Build of configuration Debug for project T1 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Distorsion.o" "..\\src\\Distorsion.cpp" 
+..\src\Distorsion.cpp:1:39: fatal error: opencv2/highgui/highgui.hpp: No such file or directory
+ #include "opencv2/highgui/highgui.hpp"
+                                       ^
+compilation terminated.
+13:21:56 **** Incremental Build of configuration Debug for project T2 ****
+Info: Internal Builder is used for build
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCVMinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T2.exe "src\\Aprender.o" "src\\Figura.o" "src\\Mahalanobis.o" "src\\Reconocer.o" "src\\Trabajo2.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_calib3d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_contrib249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_core249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_features2d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_flann249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_gpu249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_highgui249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_imgproc249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_legacy249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_ml249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_nonfree249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_objdetect249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_photo249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_stitching249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_video249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_videostab249
+collect2.exe: error: ld returned 1 exit status
+13:21:56 **** Incremental Build of configuration Debug for project T3 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Canny.o" "..\\src\\Canny.cpp" 
+..\src\Canny.cpp:8:23: fatal error: opencv/cv.h: No such file or directory
+ #include <opencv/cv.h>
+                       ^
+compilation terminated.
+13:21:56 **** Incremental Build of configuration Debug for project T4 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo4.o" "..\\src\\Trabajo4.cpp" 
+..\src\Trabajo4.cpp:1:23: fatal error: opencv/cv.h: No such file or directory
+ #include <opencv/cv.h>
+                       ^
+compilation terminated.
+13:21:56 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ransac.o" "..\\src\\Ransac.cpp" 
+..\src\Ransac.cpp:1:23: fatal error: opencv/cv.h: No such file or directory
+ #include <opencv/cv.h>
+                       ^
+compilation terminated.
+13:22:14 **** Incremental Build of configuration Debug for project T2 ****
+Info: Internal Builder is used for build
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCVMinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T2.exe "src\\Aprender.o" "src\\Figura.o" "src\\Mahalanobis.o" "src\\Reconocer.o" "src\\Trabajo2.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_calib3d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_contrib249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_core249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_features2d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_flann249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_gpu249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_highgui249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_imgproc249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_legacy249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_ml249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_nonfree249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_objdetect249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_photo249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_stitching249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_video249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_videostab249
+collect2.exe: error: ld returned 1 exit status
+15:45:28 **** Incremental Build of configuration Debug for project T1 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Distorsion.o" "..\\src\\Distorsion.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Extra2.o" "..\\src\\Extra2.cpp" 
+..\src\Extra2.cpp: In function 'int extra2()':
+..\src\Extra2.cpp:67:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 0; i < channels.size(); ++i)
+                                      ^
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Contraste.o" "..\\src\\Contraste.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo1.o" "..\\src\\Trabajo1.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Posterizacion.o" "..\\src\\Posterizacion.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Alien.o" "..\\src\\Alien.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Espejo.o" "..\\src\\Espejo.cpp" 
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T1.exe "src\\Alien.o" "src\\Contraste.o" "src\\Distorsion.o" "src\\Espejo.o" "src\\Extra2.o" "src\\Posterizacion.o" "src\\Trabajo1.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+15:45:44 **** Incremental Build of configuration Debug for project T2 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Aprender.o" "..\\src\\Aprender.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo2.o" "..\\src\\Trabajo2.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Figura.o" "..\\src\\Figura.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Reconocer.o" "..\\src\\Reconocer.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Mahalanobis.o" "..\\src\\Mahalanobis.cpp" 
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCVMinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T2.exe "src\\Aprender.o" "src\\Figura.o" "src\\Mahalanobis.o" "src\\Reconocer.o" "src\\Trabajo2.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+15:45:55 **** Incremental Build of configuration Debug for project T3 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PuntoFugaImage.o" "..\\src\\PuntoFugaImage.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PuntoFugaBasico.o" "..\\src\\PuntoFugaBasico.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Canny.o" "..\\src\\Canny.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Sobel.o" "..\\src\\Sobel.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PuntoFugaAvanzado.o" "..\\src\\PuntoFugaAvanzado.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PuntoFugaLive.o" "..\\src\\PuntoFugaLive.cpp" 
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T3.exe "src\\Canny.o" "src\\PuntoFugaAvanzado.o" "src\\PuntoFugaBasico.o" "src\\PuntoFugaImage.o" "src\\PuntoFugaLive.o" "src\\Sobel.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+c:/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../libmingw32.a(main.o):(.text.startup+0xa7): undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+15:46:07 **** Incremental Build of configuration Debug for project T4 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\RelacionImg.o" "..\\src\\RelacionImg.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo4.o" "..\\src\\Trabajo4.cpp" 
+..\src\Trabajo4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\Trabajo4.cpp:26:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\Trabajo4.cpp:48:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\Trabajo4.cpp: In function 'int main()':
+..\src\Trabajo4.cpp:69:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < imgs.size(); ++i) {
+                                ^
+..\src\Trabajo4.cpp:83:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < imgs.size(); ++i) {
+                                ^
+..\src\Trabajo4.cpp:95:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < imgs.size(); ++i) {
+                                ^
+..\src\Trabajo4.cpp:96:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int j = 0; j < imgs.size(); ++j) {
+                                 ^
+..\src\Trabajo4.cpp:121:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < imgs.size(); ++i) {
+                                ^
+..\src\Trabajo4.cpp:127:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < relations.size(); ++i) {
+                                     ^
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ImagePan.o" "..\\src\\ImagePan.cpp" 
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4.exe "src\\ImagePan.o" "src\\RelacionImg.o" "src\\Trabajo4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+15:46:15 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ransac.o" "..\\src\\Ransac.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:32: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                                ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                                      ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T2
+Info: Nothing to build for T2
+Info: Nothing to build for T2
+Info: Nothing to build for T2
+Info: Nothing to build for T2
+Info: Nothing to build for T1
+Info: Nothing to build for T2
+16:18:23 **** Incremental Build of configuration Debug for project T3 ****
+Info: Internal Builder is used for build
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T3.exe "src\\Canny.o" "src\\PuntoFugaAvanzado.o" "src\\PuntoFugaBasico.o" "src\\PuntoFugaImage.o" "src\\PuntoFugaLive.o" "src\\Sobel.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+c:/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../libmingw32.a(main.o):(.text.startup+0xa7): undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for T4
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T2
+Info: Nothing to build for T1
+Info: Nothing to build for T2
+16:19:13 **** Incremental Build of configuration Debug for project T3 ****
+Info: Internal Builder is used for build
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T3.exe "src\\Canny.o" "src\\PuntoFugaAvanzado.o" "src\\PuntoFugaBasico.o" "src\\PuntoFugaImage.o" "src\\PuntoFugaLive.o" "src\\Sobel.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+c:/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../libmingw32.a(main.o):(.text.startup+0xa7): undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for T4
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T2
+Info: Nothing to build for T1
+Info: Nothing to build for T2
+16:21:22 **** Incremental Build of configuration Debug for project T3 ****
+Info: Internal Builder is used for build
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T3.exe "src\\Canny.o" "src\\PuntoFugaAvanzado.o" "src\\PuntoFugaBasico.o" "src\\PuntoFugaImage.o" "src\\PuntoFugaLive.o" "src\\Sobel.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+c:/mingw/bin/../lib/gcc/mingw32/4.8.1/../../../libmingw32.a(main.o):(.text.startup+0xa7): undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for T4
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T2
+Info: Nothing to build for T1
+09:51:07 **** Incremental Build of configuration Debug for project T2 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo2.o" "..\\src\\Trabajo2.cpp" 
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCVMinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T2.exe "src\\Aprender.o" "src\\Figura.o" "src\\Mahalanobis.o" "src\\Reconocer.o" "src\\Trabajo2.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_calib3d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_contrib249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_core249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_features2d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_flann249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_gpu249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_highgui249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_imgproc249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_legacy249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_ml249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_nonfree249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_objdetect249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_photo249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_stitching249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_video249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_videostab249
+collect2.exe: error: ld returned 1 exit status
+09:51:11 **** Incremental Build of configuration Debug for project T3 ****
+Info: Internal Builder is used for build
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T3.exe "src\\Canny.o" "src\\PuntoFugaAvanzado.o" "src\\PuntoFugaBasico.o" "src\\PuntoFugaImage.o" "src\\PuntoFugaLive.o" "src\\Sobel.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_calib3d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_contrib249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_core249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_features2d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_flann249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_gpu249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_highgui249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_imgproc249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_legacy249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_ml249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_nonfree249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_objdetect249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_photo249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_stitching249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_video249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_videostab249
+collect2.exe: error: ld returned 1 exit status
+09:51:12 **** Incremental Build of configuration Debug for project T4 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\RelacionImg.o" "..\\src\\RelacionImg.cpp" 
+..\src\RelacionImg.cpp:8:28: fatal error: opencv/highgui.h: No such file or directory
+ #include <opencv/highgui.h>
+                            ^
+compilation terminated.
+Info: Nothing to build for T4Bis
+09:51:19 **** Incremental Build of configuration Debug for project T4 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ImagePan.o" "..\\src\\ImagePan.cpp" 
+..\src\ImagePan.cpp:8:28: fatal error: opencv/highgui.h: No such file or directory
+ #include <opencv/highgui.h>
+                            ^
+compilation terminated.
+Info: Nothing to build for T1
+09:58:32 **** Incremental Build of configuration Debug for project T2 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Aprender.o" "..\\src\\Aprender.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Mahalanobis.o" "..\\src\\Mahalanobis.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Reconocer.o" "..\\src\\Reconocer.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Figura.o" "..\\src\\Figura.cpp" 
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCVMinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T2.exe "src\\Aprender.o" "src\\Figura.o" "src\\Mahalanobis.o" "src\\Reconocer.o" "src\\Trabajo2.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_calib3d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_contrib249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_core249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_features2d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_flann249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_gpu249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_highgui249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_imgproc249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_legacy249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_ml249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_nonfree249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_objdetect249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_photo249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_stitching249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_video249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_videostab249
+collect2.exe: error: ld returned 1 exit status
+09:58:36 **** Incremental Build of configuration Debug for project T3 ****
+Info: Internal Builder is used for build
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T3.exe "src\\Canny.o" "src\\PuntoFugaAvanzado.o" "src\\PuntoFugaBasico.o" "src\\PuntoFugaImage.o" "src\\PuntoFugaLive.o" "src\\Sobel.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_calib3d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_contrib249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_core249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_features2d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_flann249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_gpu249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_highgui249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_imgproc249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_legacy249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_ml249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_nonfree249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_objdetect249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_photo249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_stitching249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_video249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_videostab249
+collect2.exe: error: ld returned 1 exit status
+09:58:36 **** Incremental Build of configuration Debug for project T4 ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ImagePan.o" "..\\src\\ImagePan.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Trabajo4.o" "..\\src\\Trabajo4.cpp" 
+..\src\Trabajo4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\Trabajo4.cpp:26:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                    ^
+..\src\Trabajo4.cpp:48:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\Trabajo4.cpp: In function 'int main()':
+..\src\Trabajo4.cpp:69:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < imgs.size(); ++i) {
+                    ^
+..\src\Trabajo4.cpp:83:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < imgs.size(); ++i) {
+                    ^
+..\src\Trabajo4.cpp:95:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < imgs.size(); ++i) {
+                    ^
+..\src\Trabajo4.cpp:96:21: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int j = 0; j < imgs.size(); ++j) {
+                     ^
+..\src\Trabajo4.cpp:121:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < imgs.size(); ++i) {
+                    ^
+..\src\Trabajo4.cpp:127:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int i = 0; i < relations.size(); ++i) {
+                    ^
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\RelacionImg.o" "..\\src\\RelacionImg.cpp" 
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4.exe "src\\ImagePan.o" "src\\RelacionImg.o" "src\\Trabajo4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
+Info: Nothing to build for T4
+Info: Nothing to build for T1
+10:01:33 **** Incremental Build of configuration Debug for project T2 ****
+Info: Internal Builder is used for build
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCVMinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T2.exe "src\\Aprender.o" "src\\Figura.o" "src\\Mahalanobis.o" "src\\Reconocer.o" "src\\Trabajo2.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_calib3d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_contrib249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_core249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_features2d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_flann249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_gpu249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_highgui249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_imgproc249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_legacy249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_ml249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_nonfree249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_objdetect249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_photo249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_stitching249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_video249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_videostab249
+collect2.exe: error: ld returned 1 exit status
+10:01:33 **** Incremental Build of configuration Debug for project T3 ****
+Info: Internal Builder is used for build
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T3.exe "src\\Canny.o" "src\\PuntoFugaAvanzado.o" "src\\PuntoFugaBasico.o" "src\\PuntoFugaImage.o" "src\\PuntoFugaLive.o" "src\\Sobel.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_calib3d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_contrib249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_core249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_features2d249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_flann249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_gpu249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_highgui249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_imgproc249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_legacy249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_ml249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_nonfree249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_objdetect249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_photo249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_stitching249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_video249
+c:/mingw/bin/../lib/gcc/mingw32/4.9.3/../../../../mingw32/bin/ld.exe: cannot find -lopencv_videostab249
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for T4
+10:01:33 **** Incremental Build of configuration Debug for project T4Bis ****
+Info: Internal Builder is used for build
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ransac.o" "..\\src\\Ransac.cpp" 
+g++ "-ID:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" "-IC:\\OpenCV\\opencv\\build\\include" "-IC:\\OpenCV\\OpenCV249PC\\opencv\\build\\include" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\T4.o" "..\\src\\T4.cpp" 
+..\src\T4.cpp: In function 'int calcMinMax(std::vector<std::vector<cv::Point_<float> > >, std::vector<cv::Point_<float> >, std::vector<float>*)':
+..\src\T4.cpp:31:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int j = 0; j < objs.size(); ++j) {
+                    ^
+..\src\T4.cpp:52:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+..\src\T4.cpp: In function 'int main(int, char**)':
+..\src\T4.cpp:114:8: warning: unused variable 'keyP' [-Wunused-variable]
+    int keyP = waitKey(segundos);
+        ^
+..\src\T4.cpp:133:24: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (int ind = 0; ind < imgsBN.size(); ++ind) {
+                        ^
+..\src\T4.cpp:58:6: warning: variable 'nImagenes' set but not used [-Wunused-but-set-variable]
+  int nImagenes = 0;
+      ^
+g++ "-LD:\\OpenCV\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV249MinGW\\x86\\lib" "-LC:\\OpenCV\\OpenCV246MinGW\\x86\\lib" -o T4Bis.exe "src\\Ransac.o" "src\\T4.o" -lopencv_calib3d249 -lopencv_contrib249 -lopencv_core249 -lopencv_features2d249 -lopencv_flann249 -lopencv_gpu249 -lopencv_highgui249 -lopencv_imgproc249 -lopencv_legacy249 -lopencv_ml249 -lopencv_nonfree249 -lopencv_objdetect249 -lopencv_photo249 -lopencv_stitching249 -lopencv_video249 -lopencv_videostab249 
+Info: Nothing to build for T4Bis
